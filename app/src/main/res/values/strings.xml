@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">GithubTask</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Detail</string>
+    <string name="title_notifications">Sample</string>
+    <string name="user_name">User Name</string>
+    <string name="email">Email</string>
+    <string name="status">Status</string>
+    <string name="user_id">User id</string>
+    <string name="comments">Comments</string>
+    <string name="gender">Gender</string>
+    <string name="comments_required">comments is required</string>
+    <string name="detail">Detail</string>
+    <string name="submit_comment">Submit Comment</string>
+    <string name="same_as_previous_cooments">same as previous comments</string>
+    <string name="save_successfully">Save successfully</string>
+</resources>
