@@ -14,15 +14,6 @@ class UserViewModel(private val appRepository: AppRepository) : ViewModel() {
 
     private val TAG = "UserViewModel"
     val userList: LiveData<MutableList<User>> = appRepository.userList.asLiveData()
-    val gitHubUser: MutableLiveData<GitHubUser> = MutableLiveData()
-
-    fun insert(user: User) = viewModelScope.launch {
-        appRepository.insert(user)
-    }
-
-    fun update(user: User) = viewModelScope.launch {
-        appRepository.update(user)
-    }
 
     fun insert(user: List<User>) = viewModelScope.launch {
         appRepository.insert(user)
@@ -61,12 +52,6 @@ class UserViewModel(private val appRepository: AppRepository) : ViewModel() {
     class UserViewModelFactory(private val appRepository: AppRepository) :
         ViewModelProvider.Factory {
 
-        /**
-         * Creates a new instance of the given `Class`.
-         *
-         * @param modelClass a `Class` whose instance is requested
-         * @return a newly created ViewModel
-         */
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
             if (modelClass.isAssignableFrom(UserViewModel::class.java)) {
                 @Suppress("UNCHECKED_CAST")

@@ -12,18 +12,6 @@ class AppRepository(private val userDao: UserDao,private var apiInterface: ApiIn
 
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
-    suspend fun insert(user: User){
-        userDao.insert(user)
-    }
-
-    @Suppress("RedundantSuspendModifier")
-    @WorkerThread
-    suspend fun update(user: User){
-        userDao.update(user)
-    }
-
-    @Suppress("RedundantSuspendModifier")
-    @WorkerThread
     suspend fun insert(user: List<User>){
         userDao.insertList(user)
     }

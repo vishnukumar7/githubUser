@@ -17,9 +17,6 @@ interface UserDao {
     @Query("select * from users")
     fun dataList(): Flow<MutableList<User>>
 
-    @Query("select * from users where id=:id")
-    fun getListById(id: Int): List<User>
-
     @Query("select * from users where id=:id limit 1")
     fun getItemById(id: Int): User
 }
